@@ -1,0 +1,23 @@
+.Card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 6px;
+    width: 300px;
+    /* height: 500px; */
+    border: 2px solid #fff;
+}
+.Card:hover {
+    border: 2px solid #5d75ab;
+}
+.card-image {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+}
+.price {
+    color: #892141;
+}
