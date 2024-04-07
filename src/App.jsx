@@ -14,8 +14,8 @@ function App() {
     const [isError, setIsError] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [selectedItem, setSelectedItem] = useState({});
-    const [hasMore, setHasMore] = useState(true);
-    const [index, setIndex] = useState(1);
+    // const [hasMore, setHasMore] = useState(true);
+    // const [index, setIndex] = useState(1);
     const [categories, setCategories] = useState([]);
 
     // Fetch data from the API First Time
@@ -34,10 +34,10 @@ function App() {
                 setDisplayedData((prevItems) => [...result]);
                 const categoriesArr = result.map((item) => item.category);
                 setCategories([...new Set(categoriesArr)]);
-                setIndex((prevIndex) => prevIndex + 1);
-                return result.length < 12
-                    ? setHasMore(false)
-                    : setHasMore(true);
+                // setIndex((prevIndex) => prevIndex + 1);
+                // return result.length < 12
+                //     ? setHasMore(false)
+                //     : setHasMore(true);
             })
             .catch((err) => {
                 setIsError(true);
@@ -60,7 +60,7 @@ function App() {
                         <Sort
                             categories={categories}
                             setData={setDisplayedData}
-                            data={data}
+                            data={displayedData}
                         />
                     </section>
                     {isError ? (
