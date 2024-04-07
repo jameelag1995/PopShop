@@ -22,7 +22,7 @@ function App() {
     useEffect(() => {
         setIsLoading(true);
         fetchData();
-        setTimeout(setIsLoading(false), 1000);
+        setTimeout(() => setIsLoading(false), 1000);
     }, []);
 
     const fetchData = () => {
@@ -64,9 +64,7 @@ function App() {
                         />
                     </section>
                     {isError ? (
-                        <h3 style={{ textAlign: "center" }}>
-                            Error Fetching Data...
-                        </h3>
+                        <h3 className="Error">Error Fetching Data...</h3>
                     ) : (
                         <section className="data-container">
                             {displayedData?.map((item) => (
