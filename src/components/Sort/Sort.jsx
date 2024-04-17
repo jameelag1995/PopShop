@@ -9,13 +9,13 @@ export default function Sort({ categories, setData, data }) {
     const [category, setCategory] = useState("");
 
     const handleChange = (event) => {
-       
+        setCategory(event.target.value);
         setData(data.filter((item) => item.category === event.target.value));
     };
     return (
         <FormControl style={{ width: "200px" }}>
             <InputLabel id="demo-simple-select-label">
-                Sort By Category
+                Filter By Category
             </InputLabel>
             <Select
                 labelId="demo-simple-select-label"
